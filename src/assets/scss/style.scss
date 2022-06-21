@@ -1,0 +1,21 @@
+// Сторонние библиотеки
+@import 'vendor/reset';
+
+// Общие стили
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+@import 'general';
+
+//Стили блоков
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/cover';
+@import 'blocks/desc-cover';
+@import 'blocks/order-registration';
+@import 'blocks/scheme';
+@import 'blocks/form';
+@import 'blocks/footer';
+@import 'blocks/payment-systems';
+@import 'blocks/contact-links';
+

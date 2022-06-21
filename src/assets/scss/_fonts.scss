@@ -1,0 +1,45 @@
+@font-face {
+	font-family: 'Lato';
+	src: local('Lato Regular'), local('Lato-Regular'),
+	url('../fonts/Lato/Lato-Regular.woff2') format('woff2'),
+	url('../fonts/Lato/Lato-Regular.woff') format('woff'),
+	url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato';
+	src: local('Lato Semi Bold'), local('Lato-Semi-Bold'),
+	url('../fonts/Lato/Lato-Semibold.woff2') format('woff2'),
+	url('../fonts/Lato/Lato-Semibold.woff') format('woff'),
+	url('../fonts/Lato/Lato-Semibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato';
+	src: local('Lato Bold'), local('Lato-Bold'),
+	url('../fonts/Lato/Lato-Bold.woff2') format('woff2'),
+	url('../fonts/Lato/Lato-Bold.woff') format('woff'),
+	url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato';
+	src: local('Lato Heavy'), local('Lato-Heavy'),
+	url('../fonts/Lato/Lato-Heavy.woff2') format('woff2'),
+	url('../fonts/Lato/Lato-Heavy.woff') format('woff'),
+	url('../fonts/Lato/Lato-Heavy.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: local('Raleway Extra Bold'), local('Raleway-Extra-Bold'),
+	url('../fonts/Raleway/Raleway-ExtraBold.woff2') format('woff2'),
+	url('../fonts/Raleway/Raleway-ExtraBold.woff') format('woff'),
+	url('../fonts/Raleway/Raleway-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}

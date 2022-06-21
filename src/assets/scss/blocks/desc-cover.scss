@@ -1,0 +1,22 @@
+.desc-cover {
+	font-family: 'Lato', sans-serif;
+	font-weight: 700;
+	line-height: 1.2;
+	&__list {
+		margin-top: 1rem;
+	}
+	&__item {
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		margin-top: .5rem;
+		&::before {
+			content: '-';
+			display: inline-block;
+			padding: 1rem;
+			line-height: 0;
+		}
+	}
+	&__item + &__item {
+		margin-top: .5rem;
+	}
+}

@@ -1,0 +1,19 @@
+.nav {
+	&__list {
+		display: flex;
+	}
+	&__item {
+	}
+	&__item + &__item {
+		margin-left: 6rem;
+	}
+	&__link {
+		font-family: 'Lato', sans-serif;
+		font-weight: 600;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		&:hover {
+			color: $text-highlight;
+		}
+	}
+}
