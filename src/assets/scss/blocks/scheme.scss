@@ -1,10 +1,59 @@
 .scheme {
+	margin-top: 8rem;
 	&__list {
+		display: flex;
+		justify-content: space-around;
 	}
 	&__item {
+		position: relative;
+		&:not(:first-child)::after {
+			content: '';
+			display: block;
+			width: 11rem;
+			height: .6rem;
+			background: url('../images/img/ellipse.svg') top right repeat-x;
+			background-size: 2.1rem .6rem;
+			position: absolute;
+			left: -7rem;
+			top: 5rem;
+		}
 	}
 	&__elem {
 		font-family: 'Lato', sans-serif;
 		font-weight: 400;
+		font-size: 1.6rem;
+		text-align: center;
+		width: 20.9rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: $text-light;
+		&::before {
+			content: '';
+			display: block;
+			width: 10rem;
+			height: 10rem;
+			border-radius: 50%;
+			border: .5rem solid $icon-border;
+			background-color: $icon-bg;
+			margin-bottom: 2rem;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
 	}
+	&__item:nth-child(1) &__elem::before {
+		background-image: url(../images/img/scheme-icons/search.svg);
+	}
+	&__item:nth-child(2) &__elem::before {
+		background-image: url(../images/img/scheme-icons/percent.svg);
+	}
+	&__item:nth-child(3) &__elem::before {
+		background-image: url(../images/img/scheme-icons/new-file.svg);
+	}
+	&__item:nth-child(4) &__elem::before {
+		background-image: url(../images/img/scheme-icons/mail.svg);
+	}
+	&__item:nth-child(5) &__elem::before {
+		background-image: url(../images/img/scheme-icons/banknote.svg);
+	}	
 }

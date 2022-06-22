@@ -1,0 +1,19 @@
+.dataset {
+	border: .1rem solid $dataset-border;
+	background-color: rgba($dataset-bg,.9);
+	border-radius: 0 0 .3rem .3rem;
+	&__list {
+		padding: .8rem 0;
+		margin-right: .4rem;
+		height: 100%;
+		overflow-y: scroll;
+	}
+	&__item {
+		color: $text-light;
+		cursor: pointer;
+		padding: .8rem 1rem;
+		&:hover {
+			color: $dataset-hover-text;
+		}
+	}
+}

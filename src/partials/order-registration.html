@@ -25,29 +25,72 @@
 			</ul>
 		</div>
 		<form class="order-registration__form form" action="/">
-				<select class="form__select" name="type-system">
-					<option disabled>Выберите тип системы</option>
-					<option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
-					<option value="Nemo enim ipsam">Nemo enim ipsam</option>
-					<option value="Et harum quidem">Et harum quidem</option>
-					<option value="Temporibus autem">Temporibus autem</option>
-					<option value="Itaque earum rerum">Itaque earum rerum</option>
-					<option value="Sed ut perspiciatis">Sed ut perspiciatis</option>
-					<option value="Nemo enim ipsam">Nemo enim ipsam</option>
-				</select>
-				<input class="form__input" type="email" placeholder="Ваш e-mail" name="email">
-				<input class="form__input" type="text" placeholder="Ваше имя" name="name">
-				<div class="form__input-wrap">
-					<label class="form__range-label" for="range">Sed ut perspiciatis, unde omnis iste natus
-						<span class="form__range-value">75%</span>
-					</label>
-					<input class="form__range" type="range" min="0" max="100" value="75" step="1" id="range" name="range">
+			<div class="form__select-wrap">
+				<input class="form__select" type="text" name="type-system" id="type-system" placeholder="Выберите тип системы" readonly>
+				<div class="form__select-arrow"></div>
+				<div class="form__dataset dataset">
+					<ul class="dataset__list">
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Sed ut perspiciatis</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Nemo enim ipsam</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Et harum quidem</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Temporibus autem</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Itaque earum rerum</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Sed ut perspiciatis</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Nemo enim ipsam</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Et harum quidem</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Temporibus autem</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Itaque earum rerum</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Sed ut perspiciatis</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Nemo enim ipsam</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Et harum quidem</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Temporibus autem</div>
+						</li>
+						<li class="dataset__item" data-option>
+							<div class="dataset__option">Itaque earum rerum</div>
+						</li>
+					</ul>
 				</div>
-				<div class="form__input-wrap">
-					<label class="form__file-label btn btn--white" for="file">Прикрепить файл</label>
-					<input class="form__file" type="file" id="file" name="file">
-				</div>
-				<input class="form__submit btn btn--blue" type="submit" value="Отправить">
+			</div>				
+			<input class="form__input form__input--email" type="email" placeholder="Ваш e-mail" name="email">
+			<input class="form__input form__input--name" type="text" placeholder="Ваше имя" name="name">
+			<div class="form__input-wrap form__input-wrap--range">
+				<label class="form__range-label" for="range">Sed ut perspiciatis, unde omnis iste natus
+					<span class="form__range-value">75%</span>
+				</label>
+				<input class="form__range" type="range" min="0" max="100" value="75" step="1" id="range" name="range">
+			</div>
+			<div class="form__input-wrap form__input-wrap--file">
+				<label class="form__file-label btn btn--white" for="file">Прикрепить файл</label>
+				<input class="form__file" type="file" id="file" name="file">
+			</div>
+			<input class="form__submit btn btn--blue" type="submit" value="Отправить">
 		</form>
 	</div>
 </section>

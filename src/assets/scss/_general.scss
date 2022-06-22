@@ -6,6 +6,7 @@ body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-size: 1.6rem;
+	color: $text-dark;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -41,10 +42,12 @@ body {
 	&--blue {
 		background-color: $btn-bg-blue;
 		border: .1rem solid $btn-border-light;
+		color: $text-light;
 	}
 	&--white {
 		background-color: $btn-bg-light;
 		border: .1rem solid $btn-border-dark;
+		color: $text-gray;
 	}
 }
 
@@ -56,14 +59,15 @@ body {
 
 /* для Chrome/Edge/Safari */
 *::-webkit-scrollbar {
-	height: 1rem;
-	width: 1rem;
+	height: .7rem;
+	width: .7rem;
 }
 *::-webkit-scrollbar-track {
 	background: $scroll-track;
+	border-radius: .3rem;
+	margin: 0.4rem;
 }
 *::-webkit-scrollbar-thumb {
 	background-color: $scroll-thumb;
 	border-radius: .5rem;
-	border: .3rem solid $scroll-track;
 }
