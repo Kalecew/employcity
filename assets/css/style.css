@@ -856,7 +856,7 @@ body {
 }
 
 .order-registration__form {
-    margin: 8rem 0 0 0;
+    margin: 9rem 0 0 0;
 }
 
 @media (max-width: 768px) {
@@ -891,14 +891,13 @@ body {
 
 .scheme__list {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 @media (max-width: 1024px) {
     .scheme__list {
         flex-direction: column;
         align-items: center;
-        height: 84rem;
     }
 }
 
@@ -906,7 +905,7 @@ body {
     position: relative;
 }
 
-.scheme__item:not(:first-child)::after {
+.scheme__item:not(:first-child)::before {
     content: "";
     display: block;
     width: 16.3rem;
@@ -919,14 +918,14 @@ body {
 }
 
 @media (max-width: 1200px) {
-    .scheme__item:not(:first-child)::after {
-        left: -28%;
+    .scheme__item:not(:first-child)::before {
+        left: -24%;
         top: 4rem;
     }
 }
 
 @media (max-width: 1024px) {
-    .scheme__item:not(:first-child)::after {
+    .scheme__item:not(:first-child)::before {
         background-repeat: repeat-y;
         background-position: center;
         background-size: 0.6rem 2.1rem;
@@ -934,7 +933,23 @@ body {
         bottom: 100%;
         left: 14%;
         width: 0.6rem;
-        height: 12rem;
+        height: 11rem;
+    }
+}
+
+.scheme__item + .scheme__item {
+    margin: 0 0 0 3rem;
+}
+
+@media (max-width: 1200px) {
+    .scheme__item + .scheme__item {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .scheme__item + .scheme__item {
+        margin: 7rem 0 0 0;
     }
 }
 

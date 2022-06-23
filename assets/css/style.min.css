@@ -774,7 +774,7 @@ body {
   }
 }
 .order-registration__form {
-  margin: 8rem 0 0 0;
+  margin: 9rem 0 0 0;
 }
 @media (max-width: 768px) {
   .order-registration__form {
@@ -818,13 +818,13 @@ body {
 .scheme__item:not(:first-child)::before {
   content: "";
   display: block;
-  width: 16.3rem;
+  width: 12rem;
   height: 0.6rem;
-  background: url("../images/img/ellipse.svg") top right repeat-x;
-  background-size: 2.1rem 0.6rem;
+  background: url(../images/img/ellipse.svg) top right repeat-x;
+  background-size: 2.5rem 0.6rem;
   position: absolute;
-  left: -13rem;
-  top: 5rem;
+  left: -7.7rem;
+  top: 5.5rem;
 }
 @media (max-width: 1200px) {
   .scheme__item:not(:first-child)::before {
@@ -845,7 +845,7 @@ body {
   }
 }
 .scheme__item + .scheme__item {
-  margin: 0 0 0 3rem;
+  margin: 0 0 0 4rem;
 }
 @media (max-width: 1200px) {
   .scheme__item + .scheme__item {
@@ -1091,7 +1091,7 @@ body {
   display: none;
 }
 .form__submit {
-  margin-top: 1rem;
+  margin-top: 3rem;
   font-weight: 600;
   grid-area: submit;
 }
