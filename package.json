@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2",
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
     "babel-core": "^6.26.3",
@@ -17,6 +16,8 @@
     "babel-preset-stage-0": "^6.24.1",
     "browser-sync": "^2.27.10",
     "del": "^6.1.1",
+    "gh-pages": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-cssbeautify": "^3.0.1",
