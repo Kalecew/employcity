@@ -18,15 +18,15 @@
 	&__item {
 		position: relative;
 		&:not(:first-child)::before {
-			content: '';
-			display: block;
-			width: 16.3rem;
-			height: .6rem;
-			background: url('../images/img/ellipse.svg') top right repeat-x;
-			background-size: 2.1rem .6rem;
-			position: absolute;
-			left: -13rem;
-			top: 5rem;
+			content: "";
+		  display: block;
+		  width: 12rem;
+		  height: 0.6rem;
+		  background: url(../images/img/ellipse.svg) top right repeat-x;
+		  background-size: 2.5rem 0.6rem;
+		  position: absolute;
+		  left: -7.7rem;
+		  top: 5.5rem;
 			@include breakpoint($notebookL) {
 				left: -24%;
 				top: 4rem;
@@ -44,7 +44,7 @@
 		}
 	}
 	&__item + &__item {
-		margin: 0 0 0 3rem;
+		margin: 0 0 0 4rem;
 		@include breakpoint($notebookL) {
 			margin: 0;
 		}
