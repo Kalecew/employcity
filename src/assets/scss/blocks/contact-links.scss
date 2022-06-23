@@ -1,12 +1,39 @@
 .contact-links {
 	&__list {
+		display: flex;
+		@include breakpoint($notebookM) {
+			flex-direction: column;
+		}
+		@include breakpoint($tablet) {
+			flex-direction: row;
+		}
 	}
 	&__item {
 	}
-	&__link {
-		&--email {
+	&__item + &__item {
+		margin: 0 0 0 3.8rem;
+		@include breakpoint($notebookM) {
+			margin: 1rem 0 0 0;
 		}
-		&--vk {
+		@include breakpoint($tablet) {
+			margin: 0 0 0 2rem;
+		}
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		&::before {
+			content: '';
+			width: 2rem;
+			height: 2rem;
+			display: inline-block;
+			margin-right: 1rem;
+		}
+		&--email::before {
+			background: url('../images/img/contacts-icons/mail.svg') center no-repeat;
+		}
+		&--vk::before {
+			background: url('../images/img/contacts-icons/vk.svg') center no-repeat;
 		}
 	}
 }

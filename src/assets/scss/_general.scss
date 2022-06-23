@@ -10,6 +10,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	background-color: $bg-dark;
 }
 .container {
 	max-width: 120rem;
@@ -20,6 +21,7 @@ body {
 .link-wrap {
 	width: 100%;
 	height: 100%;
+	transition: all .2s linear;
 	&:hover {
 		text-decoration: underline;
 	}       
@@ -28,7 +30,8 @@ body {
 	color: $text-highlight;
 }
 .uppercase {
-
+	text-transform: uppercase;
+	margin-right: .5em;
 }
 .btn {
 	font-family: 'Lato', sans-serif;
@@ -39,15 +42,29 @@ body {
 	min-width: 14.08em;
 	border-radius: .31em;
 	text-align: center;
+	transition: background-color .2s linear;
+	-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
 	&--blue {
 		background-color: $btn-bg-blue;
 		border: .1rem solid $btn-border-light;
 		color: $text-light;
+		&:hover {
+			background-color: darken($btn-bg-blue, 10%);
+		}
 	}
 	&--white {
 		background-color: $btn-bg-light;
 		border: .1rem solid $btn-border-dark;
 		color: $text-gray;
+		&:hover {
+			background-color: lighten($btn-bg-blue, 40%);
+		}
 	}
 }
 
@@ -64,8 +81,6 @@ body {
 }
 *::-webkit-scrollbar-track {
 	background: $scroll-track;
-	border-radius: .3rem;
-	margin: 0.4rem;
 }
 *::-webkit-scrollbar-thumb {
 	background-color: $scroll-thumb;

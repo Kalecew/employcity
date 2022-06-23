@@ -1,14 +1,47 @@
 .payment-systems {
 	&__list {
+		display: flex;
+		@include breakpoint($notebookM) {
+			flex-direction: column;
+		}
+		@include breakpoint($tablet) {
+			flex-direction: row;
+		}
 	}
 	&__item {
-		&--yandex-money {
+	}
+	&__item + &__item {
+		margin: 0 0 0 3.8rem;
+		@include breakpoint($notebookM) {
+			margin: 1rem 0 0 0;
 		}
-		&--web-money {
+		@include breakpoint($tablet) {
+			margin: 0 0 0 2rem;
 		}
 	}
 	&__elem {
-		&--qiwi {
+		color: $text-light-gray;
+		display: flex;
+		align-items: center;
+		&::before {
+			content: '';
+			width: 2rem;
+			height: 2rem;
+			display: inline-block;
+			margin-right: 1rem;
+			flex: 0 1 auto;
+			@include breakpoint($mobileM) {
+				flex: 1 0 auto;
+			}
+		}
+		&--qiwi::before {
+			background: url('../images/img/payment-systems/qiwi.svg') center no-repeat;
+		}
+		&--yandex-money::before {
+			background: url('../images/img/payment-systems/yandex-money.svg') center no-repeat;
+		}
+		&--web-money::before {
+			background: url('../images/img/payment-systems/web-money.svg') center no-repeat;
 		}
 	}
 }

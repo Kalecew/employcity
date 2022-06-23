@@ -2,6 +2,9 @@
 	padding: 12rem 0 15rem;
 	background: $bg-dark url('../images/img/order-registration-bg.png') center no-repeat;
 	background-size: cover;
+	@include breakpoint($tablet) {
+		padding: 10rem 0 8rem;
+	}
 	&__title {
 		text-align: center;
 		font-family: 'Lato', sans-serif;
@@ -18,8 +21,29 @@
 		font-size: 1.8rem;
 		color: $text-light-gray;
 	}
+	&__inner {
+		@include breakpoint($notebookM) {
+			display: flex;
+			justify-content: space-evenly;
+  		align-items: center;
+		}
+		@include breakpoint($tablet) {
+			display: block;
+		}
+	}
 	&__scheme {
+		@include breakpoint($notebookM) {
+			margin-right: 2rem;
+		}
 	}
 	&__form {
+		margin: 8rem 0 0 0;
+		@include breakpoint($tablet) {
+			max-width: 85%;
+			margin: 4rem auto 0;
+		}
+		@include breakpoint($mobileL) {
+			max-width: unset;
+		}
 	}
 }

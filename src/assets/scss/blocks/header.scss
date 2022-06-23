@@ -1,10 +1,14 @@
 .header {	
 	background-color: rgba(#10101D, .9);
-	position: absolute;
+	position: fixed;
 	left: 0;
 	right: 0;
 	top: 0;
 	height: 10rem;
+	z-index: $z-index-header;
+	@include breakpoint($tablet) {
+		height: 5rem;
+	}
 	&__inner {
 		color: $text-light;
 		display: flex;
@@ -20,6 +24,67 @@
 		font-weight: 800;
 		font-size: 2.8rem;
 	}
+	&__burger {
+		visibility: hidden;
+		@include breakpoint($tablet) {
+			visibility: visible;
+			height: 3rem;
+			width: 3rem;
+			position: relative;
+			overflow: hidden;
+			z-index: $z-index-burger;
+		}
+		&::before, &::after {
+			content: '';
+			display: block;
+			width: 8rem;
+			height: .2rem;
+			background-color: $burger;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, 0);
+			transition: all .2s linear;
+		}
+		&::before {
+			top: 10%;
+		}
+		&::after {
+			bottom: 10%;
+		}
+		&:focus::before, &:focus::after {
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&:focus::before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&:focus::after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+	&__burger-elem {
+		width: 3rem;
+		height: .2rem;
+		background-color: $burger;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	&__burger:focus &__burger-elem {
+		visibility: hidden;
+	}
 	&__nav {
+		@include breakpoint($tablet) {
+			position: absolute;
+			top: 0;
+			left: 100%;
+			height: 100vh;
+			width: 100vw;
+			transition: all .2s linear;
+		}
+	}
+	&__burger:focus + &__nav {
+		left: 0;
 	}
 }

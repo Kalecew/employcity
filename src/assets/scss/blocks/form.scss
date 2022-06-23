@@ -2,16 +2,25 @@
 	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-size: 1.8rem;
-	margin-top: 8rem;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-areas: "system email name"
 											 "range range file"
 											 "... submit ...";
 	grid-gap: 3rem;
+	@include breakpoint($notebookM) {
+		grid-template-columns: 1fr;
+		grid-template-areas: "system"
+												 "email"
+												 "name"
+											 	 "range"
+											 	 "file"
+											 	 "submit";
+	}
 	&__select-wrap {
 		grid-area: system;
 		position: relative;
+		z-index: $z-index-select;	
 	}
 	&__select {		
 		cursor: pointer;
@@ -22,7 +31,7 @@
 		color: $input-placeholder; 
 		appearance: none;
 		width: 100%;
-		height: 100%;	
+		height: 100%;
 		transition: all .2s linear;
 		&::placeholder {
 			color: $input-placeholder;
@@ -83,25 +92,79 @@
 	&__input-wrap {
 		&--range {
 			grid-area: range;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-content: space-between;
+			-webkit-touch-callout: none; /* iOS Safari */
+		  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+		  -khtml-user-select: none;    /* Konqueror */
+		  -moz-user-select: none;      /* Firefox */
+		  -ms-user-select: none;       /* Internet Explorer/Edge */
+		  user-select: none;           /* Non-prefixed version, currently
+		                                  not supported by any browser */
+		  @include breakpoint($notebookM) {
+		  	min-height: 5rem;
+			}
+			@include breakpoint($tablet) {
+				min-height: 8rem;
+			}
 		}
 		&--file {
 			grid-area: file;
 		}
 	}
 	&__range-label {
+		color: $text-light;
 	}
 	&__range-value {
 		font-weight: 600;
+		text-align: right;
+		color: $text-light;
+		@include breakpoint($notebookM) {
+			width: 7rem;
+		}
+		@include breakpoint($tablet) {
+			width: 100%;
+			text-align: left;
+		}
 	}
 	&__range {
-		background-color: $input-bg;
-		border: .1rem solid $input-border;
 		display: block;
+		width: 100%;
+		position: relative;
+		background-color: $range-bg;
+		border: .1rem solid $range-border;
+		height: .6rem;
+		border-radius: .3rem;
+		cursor: pointer;
+	}
+	&__thumb {
+		background-color: $range-thumb-bg;
+		border: .3rem solid $range-thumb-border;
+		width: 2.4rem;
+		height: 2.4rem;
+		border-radius: 50%;
+		position: absolute;
+		top: -1rem;
 	}
 	&__file-label {
 		font-weight: 600;
 		display: block;
 		border: .2rem solid $btn-border-blue;
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		&::before {
+			content: '';
+			display: inline-block;
+			width: 1.8rem;
+			height: 2rem;
+			background: url('../images/img/file.svg') center no-repeat;
+			margin-right: 1rem;
+		}
 	}
 	&__file {
 		display: none;

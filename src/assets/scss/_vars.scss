@@ -23,6 +23,11 @@ $input-placeholder: #272733;
 $input-bg: #FFFFFF;
 $input-border: #FFFFFF;
 
+$range-bg: #dfdfe1;
+$range-border: #FFFFFF;
+$range-thumb-bg: #42A9ED;
+$range-thumb-border: #286690;
+
 $select-open-bg: #3D4050;
 $select-open-border: #3D4050;
 
@@ -33,7 +38,17 @@ $dataset-hover-text: #42A9ED;
 $scroll-track: #3D4050;
 $scroll-thumb: #3E9CDC;
 
-$notebook: 	1024px;
-$tablet: 	768px;
+$separator: #C3C3C3;
+
+$burger: #FFFFFF;
+
+$z-index-select: 1;
+$z-index-scheme-icon: 2;
+$z-index-header: 3;
+$z-index-burger: 4;
+
+$notebookL: 1200px;
+$notebookM: 1024px;
+$tablet: 		768px;
 $mobileL: 	425px;
 $mobileM: 	375px;

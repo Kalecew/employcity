@@ -1,21 +1,47 @@
 .scheme {
 	margin-top: 8rem;
+	@include breakpoint($notebookL) {
+		margin: 8rem auto;
+  	max-width: 100rem;
+	}
+	@include breakpoint($notebookM) {
+		margin: 4rem 0 0 0;
+	}
 	&__list {
 		display: flex;
 		justify-content: space-around;
+		@include breakpoint($notebookM) {
+			flex-direction: column;
+			align-items: center;
+			height: 84rem;
+		}
 	}
 	&__item {
 		position: relative;
 		&:not(:first-child)::after {
 			content: '';
 			display: block;
-			width: 11rem;
+			width: 16.3rem;
 			height: .6rem;
 			background: url('../images/img/ellipse.svg') top right repeat-x;
 			background-size: 2.1rem .6rem;
 			position: absolute;
-			left: -7rem;
+			left: -13rem;
 			top: 5rem;
+			@include breakpoint($notebookL) {
+				left: -28%;
+				top: 4rem;
+			}
+			@include breakpoint($notebookM) {
+				background-repeat: repeat-y;
+				background-position: center;
+				background-size: .6rem 2.1rem;
+				top: unset;
+				bottom: 100%;
+				left: 14%;
+				width: .6rem;
+				height: 12rem;
+			}
 		}
 	}
 	&__elem {
@@ -23,11 +49,16 @@
 		font-weight: 400;
 		font-size: 1.6rem;
 		text-align: center;
-		width: 20.9rem;
+		width: 20rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		color: $text-light;
+		@include breakpoint($notebookM) {
+			flex-direction: row;
+			width: 30rem;
+			text-align: left;
+		}
 		&::before {
 			content: '';
 			display: block;
@@ -36,9 +67,19 @@
 			border-radius: 50%;
 			border: .5rem solid $icon-border;
 			background-color: $icon-bg;
-			margin-bottom: 2rem;
+			margin: 0 0 2rem 0;
 			background-position: center;
 			background-repeat: no-repeat;
+			position: relative;
+			z-index: $z-index-scheme-icon;
+			@include breakpoint($notebookL) {
+				width: 8rem;
+				height: 8rem;
+			}
+			@include breakpoint($notebookM) {
+				flex: 0 0 auto;
+				margin: 0 2rem 0 0;
+			}
 		}
 	}
 	&__item:nth-child(1) &__elem::before {

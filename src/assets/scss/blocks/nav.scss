@@ -1,19 +1,37 @@
 .nav {
+	@include breakpoint($tablet) {
+		background-color: $bg-dark;
+	}
 	&__list {
 		display: flex;
+		@include breakpoint($tablet) {
+			height: 100%;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	&__item {
 	}
 	&__item + &__item {
-		margin-left: 6rem;
+		margin: 0 0 0 6rem;
+		@include breakpoint($tablet) {
+			margin: 4rem 0 0 0;
+		}
 	}
 	&__link {
 		font-family: 'Lato', sans-serif;
 		font-weight: 600;
 		font-size: 1.3rem;
 		text-transform: uppercase;
+		transition: color .2s linear;
 		&:hover {
 			color: $text-highlight;
+		}
+		@include breakpoint($tablet) {
+			font-size: 3.3rem;
+			font-weight: 400;
+			text-transform: none;
 		}
 	}
 }

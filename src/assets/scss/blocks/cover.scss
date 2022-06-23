@@ -3,11 +3,25 @@
 	background-size: cover;
 	height: 85rem;
 	padding: 10rem 0;
+	@include breakpoint($tablet) {
+		height: auto;
+		background-image: url('../images/img/cover-bg768.jpg');
+	}
+	@include breakpoint($mobileM) {
+		background-image: url('../images/img/cover-bg375.jpg');
+	}
 	&__inner {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		max-width: 80rem;
+		@include breakpoint($tablet) {
+			max-width: 40rem;
+		}
+		@include breakpoint($mobileL) {
+			max-width: 100%;
+		}
 	}
 	&__title {
 		font-family: 'Lato', sans-serif;
@@ -16,18 +30,33 @@
 		line-height: 1.2;
 		max-width: 80rem;
 		text-transform: uppercase;
+		@include breakpoint($tablet) {
+			font-size: 3rem;
+		}
 	}
 	&__desc {
 		margin-top: 8rem;
-		font-size: 2rem;
+		@include breakpoint($tablet) {
+			margin-top: 4rem;
+		}
 	}
 	&__btns {
 		margin-top: 8rem;
 		display: flex;
+		flex-wrap: wrap;
+		@include breakpoint($tablet) {
+			margin-top: 4rem;
+		}
 	}
 	&__btn {
+		@include breakpoint($mobileL) {
+			width: 100%;
+		}
 	}
 	&__btn + &__btn {
-		margin-left: 3rem;
+		margin: 0 0 0 3rem;
+		@include breakpoint($mobileL) {
+			margin: 3rem 0 0 0;
+		}
 	}
 }

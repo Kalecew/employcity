@@ -2,6 +2,10 @@
 	font-family: 'Lato', sans-serif;
 	font-weight: 700;
 	line-height: 1.2;
+	font-size: 2rem;
+	@include breakpoint($tablet) {
+		font-size: 1.5rem;
+	}
 	&__list {
 		margin-top: 1rem;
 	}
