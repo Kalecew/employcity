@@ -9,16 +9,15 @@
 	}
 	&__list {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 		@include breakpoint($notebookM) {
 			flex-direction: column;
 			align-items: center;
-			height: 84rem;
 		}
 	}
 	&__item {
 		position: relative;
-		&:not(:first-child)::after {
+		&:not(:first-child)::before {
 			content: '';
 			display: block;
 			width: 16.3rem;
@@ -29,7 +28,7 @@
 			left: -13rem;
 			top: 5rem;
 			@include breakpoint($notebookL) {
-				left: -28%;
+				left: -24%;
 				top: 4rem;
 			}
 			@include breakpoint($notebookM) {
@@ -40,8 +39,17 @@
 				bottom: 100%;
 				left: 14%;
 				width: .6rem;
-				height: 12rem;
+				height: 11rem;
 			}
+		}
+	}
+	&__item + &__item {
+		margin: 0 0 0 3rem;
+		@include breakpoint($notebookL) {
+			margin: 0;
+		}
+		@include breakpoint($notebookM) {
+			margin: 7rem 0 0 0;
 		}
 	}
 	&__elem {
